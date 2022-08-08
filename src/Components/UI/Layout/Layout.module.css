@@ -1,0 +1,128 @@
+:root{
+    --primary: #41436a;
+    --secondary: #974063;
+    --terciary: #f54768;
+    --lightSlate: #ccd6f6;
+    --medSlate: #a8b2d1;
+    --slate: #8892b0;
+    --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+}
+
+html{
+    width: 100%;
+}
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: auto;
+    width: 100%;
+}
+header{
+    height: 100px;
+    background: var(--primary);
+}
+nav{
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    height: fit-content;
+    margin: auto;
+}
+.logoDiv{
+    grid-column: 1/2;
+    margin: auto;
+}
+
+.links_full{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* margin-left: 30%; */
+}
+.nav_Links{
+    display: none;
+}
+.burger {
+    height: 50px; 
+    width: 70px;
+    font-size: 45px;
+    color: var(--secondary);
+    margin: auto;
+    background-color: var(--primary);
+    border: none;
+    cursor: pointer;
+}
+
+.nav_Links{
+    display: none;
+}
+.extendedLinks{
+        background-color: gray;
+        z-index: 1000;
+        width: 100%;
+        /* height: fit-content; */
+        grid-row: 2/3;
+        grid-column: 1/4;
+        margin-left: 20%;
+        text-align: left;
+        margin: auto;
+        padding-left: 10%;
+}
+.link_a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    align-items: center;
+    /* background-color: white; */
+    z-index: 3;
+  }
+.extended_nav_links{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (min-width:450px){
+    nav{
+        display: grid;
+        grid-template-columns: 20% 40% 40%;
+        
+    }
+    .logoDiv{
+        grid-column: 1/2;
+    }
+    .burger{
+        display: none;
+    }
+    .links_full{
+        grid-column: 2/4;
+    }
+    .nav_Links{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media(min-width:850px){
+    .links_full{
+        grid-column: 3/4;
+    }
+}
