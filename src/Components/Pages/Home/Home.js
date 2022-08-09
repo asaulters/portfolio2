@@ -3,8 +3,33 @@ import React from 'react';
 import AvatarImg from '../../../Assets/Home/avatar1.jpg'
 
 import classes from './Home.module.css';
+import FeaturedCard from '../../UI/Shared/FeaturedCard';
 
 const Home = () => {
+
+  const ProjectData = [
+    {
+      'title': 'Freelance Website',
+      'description': 'A minimal themed site for my freelance web dev company. This is fully responseive and functional.',
+      'tags': 'React Html Css JavaScript',
+      'featured': true
+    },
+    {
+      'title': 'Media Site',
+      'description': 'This is a media site I designed and developed. This site is only front end, but it does have the different functional components you would expect. This includes a search function and a bookmark component.',
+      'tags': 'React JavaScript Html Css',
+      'featured': true,
+    },
+    {
+      'title': 'Mack Construction',
+      'description': 'This site is a freelance site I created for a small construction businesss. ',
+      'tags': 'React JavaScript Html Css',
+      'featured': true,
+    },
+  ]
+  
+
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.intro}>
@@ -33,10 +58,18 @@ const Home = () => {
             </ul>
           
         </div>
-        <div className={classes.aboutImgWapper}>
+        <div className={classes.aboutImgWrapper}>
           <img src={AvatarImg} alt='Img of myself'/>
         </div>
         
+      </div>
+      <div className={classes.projectsDiv}>
+        <div className={classes.sectionHeadings}>
+            <h3>02.<span>Some Things I've Built</span></h3><div></div>
+        </div>
+        <div className={classes.projects}>
+          <FeaturedCard projects={ProjectData}/>
+        </div>
       </div>
 
     </div>
