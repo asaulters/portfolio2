@@ -95,6 +95,27 @@ nav{
     flex-direction: column;
 }
 
+.socialLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+    cursor: pointer;
+}
+.socialLinks img{
+    width: 20%;
+    margin: auto;
+}
+.bottomCopy{
+    margin: auto;
+    text-align: center;
+    font-size: var(--fz-md);
+}
+.bottomCopy{
+    color: var(--slate);
+    font-size: var(--fz-lg);
+}
 
 
 @media (min-width:450px){

@@ -1,5 +1,6 @@
 :root{
     --primary: #41436a;
+    --secondaryBackground: #41586a;
     --secondary: #974063;
     --terciary: #f54768;
     --lightSlate: #ccd6f6;
@@ -49,8 +50,11 @@ body{
     color: var(--terciary);
     border: 2px solid var(--terciary);
     font-size: var(--fz-md);
-    padding: 5% 10%;
+    /* padding: 5% 10%; */
     font-weight: 600;
+    width: 80%;
+    height: 70px;
+    max-width: 250px;
 }
 .sectionHeadings{
     display: grid;
@@ -108,9 +112,81 @@ body{
     margin-right: 2%;
 }
 .CardDiv{
-    background-color: #8892b0;
+    background-color: var(--secondaryBackground);
     border-radius: 10px;
-    padding: 5%;
+    padding: 10% 5%;
+    height: fit-content;
     width: 90%;
     margin: 10% auto;
+
+}
+.CardDiv h4{
+    color: var(--terciary);
+    margin-bottom: -4%
+}
+.CardDiv h2{
+    color: var(--lightSlate);
+}
+.CardDiv p{
+    font-size: var(--fz-md);
+    color: var(--slate);
+}
+.CardDiv h6{
+    margin-top: -2%;
+    font-size: var(--fz-md);
+    color: var(--slate);
+}
+.CardDiv button{
+    background-color: var(--secondaryBackground);
+    border: 1px solid var(--terciary);
+    color: var(--terciary);
+    padding: 5% 10%;
+    border-radius: 5px;
+}
+.contactDiv{
+    margin: 10% auto 20% auto;
+}
+.contactTop h3{
+    font-size: var(--fz-xxl);
+    color: var(--lightSlate);
+}
+.contactTop p{
+    font-size: var(--fz-md);
+    color: var(--slate);
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    width: 80%;
+    max-width: 230px;
+    margin-bottom: 1%;
+    height: 25px;
+}
+form textarea{
+    width: 80%;
+    max-width: 230px;
+}
+.contactBot button{
+    background-color: var(--primary);
+    border: 1px solid var(--terciary);
+    color: var(--terciary);
+    padding: 5% 10%;
+    border-radius: 5px;
+    margin-top: 5%;
+    font-size: var(--fz-md);
+}
+
+.socialLinks{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+.socialLinks img{
+    width: 20%;
+}
+
+@media(min-width:450px){
+
 }

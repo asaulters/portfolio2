@@ -12,22 +12,28 @@ const Home = () => {
       'title': 'Freelance Website',
       'description': 'A minimal themed site for my freelance web dev company. This is fully responseive and functional.',
       'tags': 'React Html Css JavaScript',
-      'featured': true
+      'featured': true,
+      'site': 'bullcitydevelopment.com',
     },
     {
       'title': 'Media Site',
       'description': 'This is a media site I designed and developed. This site is only front end, but it does have the different functional components you would expect. This includes a search function and a bookmark component.',
       'tags': 'React JavaScript Html Css',
       'featured': true,
+      'site': 'bullcitydevelopment.com',
     },
     {
       'title': 'Mack Construction',
-      'description': 'This site is a freelance site I created for a small construction businesss. ',
+      'description': 'This site is a freelance site I created for a small construction businesss. Their goal was to be able to have a nice looking site to send their new clients to allow them to look more professional now that they are bidding on bigger projects',
       'tags': 'React JavaScript Html Css',
       'featured': true,
+      'site': 'bullcitydevelopment.com',
     },
-  ]
-  
+  ];
+
+  const projectNav = () => {
+    window.open('{project.site}', 'blank', 'noopener noreferrer')
+  }
 
 
   return (
@@ -68,10 +74,39 @@ const Home = () => {
             <h3>02.<span>Some Things I've Built</span></h3><div></div>
         </div>
         <div className={classes.projects}>
-          <FeaturedCard projects={ProjectData}/>
+        {ProjectData.filter((project) => project.featured === true).map((project, i)=>(
+          <FeaturedCard 
+            index={i}
+            title={project.title}
+            description={project.description}
+            tags={project.tags}
+            site={project.site}
+
+            />)
+        )}
+
         </div>
       </div>
-
+      <div className={classes.contactDiv}>
+        <div className={classes.sectionHeadings}>
+            <h3>03.<span>What's Next</span></h3><div></div>
+        </div>
+      
+        <div className={classes.contactTop}>
+          <h3>Drop a Line</h3>
+          <p>I'm always on the lookout and open to new and exciting ideas, projects, and opportunities. If you think you have one of these or just want to chat, feel free to drop me a line below. </p>
+        </div>
+        <div className={classes.contactBot}>
+          <form>
+            <input type='text' placeholder='Name *' name='Name' required />
+            <input type='text' placeholder='Company' name='Company' />
+            <input type='text' placeholder='Phone Number' name='number' />
+            <input type='text' placeholder='Email *' name='email' required />
+            <textarea name='textarea' placeholder='What can I do for you? *' rows='6' cols='30' />
+          </form>
+          <button>Send It</button>
+        </div>
+      </div>
     </div>
   )
 }

@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {Link, NavLink} from 'react-router-dom';
 
 import classes from './Layout.module.css';
+import IgLogo from '../../../Assets/Home/instagram.png';
+import LiLogo from '../../../Assets/Home/linkedin.png';
+import GhLogo from '../../../Assets/Home/github.png'
 
 const Layout = ({children}) => {
     const [extend, setExtend] = useState(false);
@@ -52,6 +55,16 @@ const Layout = ({children}) => {
             <div>
                 <main>{children}</main>
                 
+            </div>
+            <div className={classes.bottomFooter}>
+                <div className={classes.socialLinks}>
+                    <img src={GhLogo} alt='Github Logo' />
+                    <img src={IgLogo} alt='IG Logo' />
+                    <img src={LiLogo} alt='LI Logo' />
+                </div>
+                <div className={classes.bottomCopy}>
+                    <h6>Built by Adam Saulters</h6>
+                </div>
             </div>
         </div>
         
