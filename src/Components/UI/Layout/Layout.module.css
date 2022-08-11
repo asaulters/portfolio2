@@ -1,5 +1,6 @@
 :root{
     --primary: #41436a;
+    --secondaryBackground: #41586a;
     --secondary: #974063;
     --terciary: #f54768;
     --lightSlate: #ccd6f6;
@@ -49,6 +50,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    color: var(--terciary);
     /* margin-left: 30%; */
 }
 .nav_Links{
@@ -58,18 +60,15 @@ nav{
     height: 50px; 
     width: 70px;
     font-size: 45px;
-    color: var(--secondary);
+    color: var(--terciary);
     margin: auto;
     background-color: var(--primary);
     border: none;
     cursor: pointer;
 }
 
-.nav_Links{
-    display: none;
-}
 .extendedLinks{
-        background-color: gray;
+        background-color: var(--primary);
         z-index: 1000;
         width: 100%;
         /* height: fit-content; */
@@ -83,7 +82,7 @@ nav{
 .link_a {
     text-decoration: none;
     list-style: none;
-    color: black;
+    color: var(--terciary);
     font-size: 18px;
     font-weight: 400;
     align-items: center;
@@ -139,6 +138,7 @@ nav{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        color: var(--terciary);
     }
 }
 
