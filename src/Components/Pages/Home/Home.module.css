@@ -117,37 +117,54 @@ body{
     font-size: var(--fz-md);
     margin-right: 2%;
 }
-.CardDiv{
+.CardDiv1,
+.CardDiv2,
+.CardDiv3{
     background-color: var(--secondaryBackground);
     border-radius: 10px;
     padding: 10% 5%;
     height: fit-content;
     width: 90%;
     margin: 10% auto;
-
+    max-width: 400px;
 }
-.CardDiv h4{
+.CardDiv1 h4,
+.CardDiv2 h4,
+.CardDiv3 h4{
     color: var(--terciary);
     margin-bottom: -4%
 }
-.CardDiv h2{
+.CardDiv1 h2,
+.CardDiv2 h2,
+.CardDiv3 h2{
     color: var(--lightSlate);
 }
-.CardDiv p{
+.CardDiv1 p,
+.CardDiv2 p,
+.CardDiv3 p{
     font-size: var(--fz-md);
     color: var(--slate);
 }
-.CardDiv h6{
+.CardDiv1 h6,
+.CardDiv2 h6,
+.CardDiv3 h6{
     margin-top: -2%;
     font-size: var(--fz-md);
     color: var(--slate);
 }
-.CardDiv button{
+.CardDiv1 button,
+.CardDiv2 button,
+.CardDiv3 button{
     background-color: var(--secondaryBackground);
     border: 1px solid var(--terciary);
     color: var(--terciary);
     padding: 5% 10%;
     border-radius: 5px;
+}
+.cardImgWrapper1,
+.cardImgWrapper2,
+.cardImgWrapper3{
+    display:none;
 }
 .contactDiv{
     margin: 10% auto 20% auto;
@@ -191,6 +208,53 @@ form textarea{
 }
 .socialLinks img{
     width: 20%;
+}
+.cardImgWrapper{
+    display: none;
+}
+
+@media(min-width:700px){
+    .projects{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        
+    }
+    .cardWrapper1{
+        grid-row: 1/2;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .CardDiv1{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        text-align: right;
+        background-color: var(--primary);
+    }
+    .cardText{
+        background-color: var(--secondaryBackground);
+        padding: 2% 2%;
+        margin-top: 1%;
+        margin-left: -23%;
+        width: 120%;
+        z-index: 1000;
+        opacity: 1;
+    }
+    .cardImgWrapper1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        width: 100%;
+        height: 60%;
+        margin-top: 10%;
+        z-index: 0;
+    }
+    .CardImg{
+        width: 100%;
+        height: 100%;
+        opacity: .6;
+    }
+
+
 }
 
 @media(min-width:800px){

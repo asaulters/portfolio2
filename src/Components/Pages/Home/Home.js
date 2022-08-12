@@ -11,28 +11,31 @@ const Home = () => {
 
   const ProjectData = [
     {
+      'id': '1',
       'title': 'Freelance Website',
       'description': 'A minimal themed site for my freelance web dev company. This is fully responseive and functional.',
       'tags': 'React Html Css JavaScript',
       'featured': true,
       'site': 'bullcitydevelopment.com',
-      'img': '../../../Assets/Home/projects/bcd1.png'
+      'img': '../../../Assets/Home/bcd1.png'
     },
     {
+      'id': '2',
       'title': 'Media Site',
       'description': 'This is a media site I designed and developed. This site is only front end, but it does have the different functional components you would expect. This includes a search function and a bookmark component.',
       'tags': 'React JavaScript Html Css',
       'featured': true,
       'site': 'bullcitydevelopment.com',
-      'img': '../../../Assets/Home/projects/entertaimentApp1.png'
+      'img': '{MediaImg}'
     },
     {
+      'id': '3',
       'title': 'Mack Construction',
       'description': 'This site is a freelance site I created for a small construction businesss. Their goal was to be able to have a nice looking site to send their new clients to allow them to look more professional now that they are bidding on bigger projects',
       'tags': 'React JavaScript Html Css',
       'featured': true,
       'site': 'bullcitydevelopment.com',
-      'img': '../../../Assets/Home/projects/bcd1.png'
+      'img': '../../../Assets/Home/bcd1.png'
     },
   ];
 
@@ -79,7 +82,7 @@ const Home = () => {
             <h3>02.<span>Some Things I've Built</span></h3><div></div>
         </div>
         <div className={classes.projects}>
-        {ProjectData.filter((project) => project.featured === true).map((project, i)=>(
+        {/* {ProjectData.filter((project) => project.featured === true).map((project, i)=>(
           <FeaturedCard 
             index={i}
             title={project.title}
@@ -87,8 +90,50 @@ const Home = () => {
             tags={project.tags}
             site={project.site}
             img={project.img}
+            id={project.id}
             />)
-        )}
+        )} */}
+        <div className={classes.cardWrapper1}>
+          <div className={classes.CardDiv1} >
+            
+              <h4>Featured Project</h4>
+              <div className={classes.cardText}>
+                <h2>{ProjectData[0].title}</h2>
+                <p>{ProjectData[0].description}</p>
+              </div>
+              <h6 className={classes.CardTags}>{ProjectData[0].tags}</h6>
+              <button onClick={projectNav}>Learn More</button>
+          </div>
+          <div className={classes.cardImgWrapper1}>
+            <img src={BCDImg} alt='img1' className={classes.CardImg} />
+          </div>      
+        </div>
+        <div className={classes.cardWrapper2}>
+          <div className={classes.CardDiv2} >
+            
+              <h4>Featured Project</h4>
+              <h2>{ProjectData[1].title}</h2>
+              <p>{ProjectData[1].description}</p>
+              <h6 className={classes.CardTags}>{ProjectData[1].tags}</h6>
+              <button onClick={projectNav}>Learn More</button>
+          </div>
+          <div className={classes.cardImgWrapper2}>
+            <img src={MediaImg} alt='img1' className={classes.CardImg} />
+          </div>      
+        </div>
+        <div className={classes.cardWrapper3}>
+          <div className={classes.CardDiv3} >
+            
+              <h4>Featured Project</h4>
+              <h2>{ProjectData[2].title}</h2>
+              <p>{ProjectData[2].description}</p>
+              <h6 className={classes.CardTags}>{ProjectData[2].tags}</h6>
+              <button onClick={projectNav}>Learn More</button>
+          </div>
+          <div className={classes.cardImgWrapper3}>
+            <img src={MediaImg} alt='img1' className={classes.CardImg} />
+          </div>      
+        </div>
 
         </div>
       </div>
