@@ -37,7 +37,26 @@ const Home = () => {
       'site': 'bullcitydevelopment.com',
       'img': '../../../Assets/Home/bcd1.png'
     },
+    {
+      'id': '4',
+      'title': 'Designo FEM Site',
+      'description': 'This site is a challenge I got off of Front End Mentor. In it, they give you a target for what the site is supposed to do, look like, and have on it and you create it with whatever you wish. <br><br> In this I explored more static JS, Html, and Css without React. It gave me a lot of practice on my design development.',
+      'tags': ' JavaScript Html Css',
+      'featured': false,
+      'site': '#',
+      
+    },
+        {
+      'id': '5',
+      'title': 'Mack Construction',
+      'description': 'This site is a challenge I got off of Front End Mentor as well. In it, they give you a target for what the site is supposed to do, look like, and have on it and you create it with whatever you wish. <br><br> In this I explored more static JS, Html, and Css without React. It gave me a lot of practice on different nav methods as well as what helped really cement grid d/t the design.',
+      'tags': ' JavaScript Html Css',
+      'featured': false,
+      'site': '#',
+    },
   ];
+
+
 
   const projectNav = () => {
     window.open('{project.site}', 'blank', 'noopener noreferrer')
@@ -93,47 +112,57 @@ const Home = () => {
             id={project.id}
             />)
         )} */}
-        <div className={classes.cardWrapper1}>
-          <div className={classes.CardDiv1} >
-            
-              <h4>Featured Project</h4>
-              <div className={classes.cardText}>
-                <h2>{ProjectData[0].title}</h2>
-                <p>{ProjectData[0].description}</p>
-              </div>
-              <h6 className={classes.CardTags}>{ProjectData[0].tags}</h6>
-              <button onClick={projectNav}>Learn More</button>
+          <div className={classes.cardWrapper1}>
+            <div className={classes.CardDiv1} >
+              
+                <h4>Featured Project</h4>
+                <div className={classes.cardText}>
+                  <h2>{ProjectData[0].title}</h2>
+                  <p>{ProjectData[0].description}</p>
+                  <h6 className={classes.CardTags}>{ProjectData[0].tags}</h6>
+                </div>
+
+                <button onClick={projectNav}>Learn More</button>
+            </div>
+            <div className={classes.cardImgWrapper1}>
+              <img src={BCDImg} alt='img1' className={classes.CardImg} />
+            </div>      
           </div>
-          <div className={classes.cardImgWrapper1}>
-            <img src={BCDImg} alt='img1' className={classes.CardImg} />
-          </div>      
-        </div>
-        <div className={classes.cardWrapper2}>
-          <div className={classes.CardDiv2} >
-            
-              <h4>Featured Project</h4>
-              <h2>{ProjectData[1].title}</h2>
-              <p>{ProjectData[1].description}</p>
-              <h6 className={classes.CardTags}>{ProjectData[1].tags}</h6>
-              <button onClick={projectNav}>Learn More</button>
+
+
+          <div className={classes.cardWrapper2}>
+            <div className={classes.CardDiv2} >
+              
+                <h4>Featured Project</h4>
+                <div className={classes.cardText2}>
+                  <h2>{ProjectData[1].title}</h2>
+                  <p>{ProjectData[1].description}</p>
+                  <h6 className={classes.CardTags}>{ProjectData[1].tags}</h6>
+                </div>
+                <button onClick={projectNav}>Learn More</button>
+            </div>
+            <div className={classes.cardImgWrapper2}>
+              <img src={MediaImg} alt='img1' className={classes.CardImg} />
+            </div>      
           </div>
-          <div className={classes.cardImgWrapper2}>
-            <img src={MediaImg} alt='img1' className={classes.CardImg} />
-          </div>      
-        </div>
-        <div className={classes.cardWrapper3}>
-          <div className={classes.CardDiv3} >
-            
-              <h4>Featured Project</h4>
-              <h2>{ProjectData[2].title}</h2>
-              <p>{ProjectData[2].description}</p>
-              <h6 className={classes.CardTags}>{ProjectData[2].tags}</h6>
-              <button onClick={projectNav}>Learn More</button>
+
+
+
+          <div className={classes.cardWrapper3}>
+            <div className={classes.CardDiv3} >
+              
+                <h4>Featured Project</h4>
+                <div className={classes.cardText3}>
+                  <h2>{ProjectData[2].title}</h2>
+                  <p>{ProjectData[2].description}</p>
+                  <h6 className={classes.CardTags}>{ProjectData[2].tags}</h6>
+                </div>
+                <button onClick={projectNav}>Learn More</button>
+            </div>
+            <div className={classes.cardImgWrapper3}>
+              <img src={MediaImg} alt='img1' className={classes.CardImg} />
+            </div>      
           </div>
-          <div className={classes.cardImgWrapper3}>
-            <img src={MediaImg} alt='img1' className={classes.CardImg} />
-          </div>      
-        </div>
 
         </div>
       </div>
