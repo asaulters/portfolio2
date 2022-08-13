@@ -6,6 +6,9 @@ import classes from './Home.module.css';
 import FeaturedCard from '../../UI/Shared/FeaturedCard';
 import BCDImg from '../../../Assets/Home/projects/bcd1.png';
 import MediaImg from '../../../Assets/Home/projects/entertaimentApp1.png';
+import GHIcon from '../../../Assets/Home/github.png';
+import folderIcon from '../../../Assets/Home/folder.png';
+
 
 const Home = () => {
 
@@ -48,8 +51,8 @@ const Home = () => {
     },
         {
       'id': '5',
-      'title': 'Mack Construction',
-      'description': 'This site is a challenge I got off of Front End Mentor as well. In it, they give you a target for what the site is supposed to do, look like, and have on it and you create it with whatever you wish. <br><br> In this I explored more static JS, Html, and Css without React. It gave me a lot of practice on different nav methods as well as what helped really cement grid d/t the design.',
+      'title': 'Arch Studio FEM Site',
+      'description': 'This site is a challenge I got off of Front End Mentor as well. In this I explored more static JS, Html, and Css without React. It gave me a lot of practice on different nav methods as well as what helped really cement grid d/t the design.',
       'tags': ' JavaScript Html Css',
       'featured': false,
       'site': '#',
@@ -164,6 +167,36 @@ const Home = () => {
             </div>      
           </div>
 
+          <div className={classes.sectionHeadings}>
+            <h3>02.5.<span>Other Projects</span></h3>
+        </div>
+
+          <div className={classes.extraProjects}>
+            <div className={classes.extraProject1}>
+              <div className={classes.EPTop}>
+                <img src={folderIcon} alt='folder icon'/>
+                <img src={GHIcon} alt='github icon'/>
+              </div>
+              <div className={classes.EPBot}>
+                <h2>{ProjectData[3].title}</h2>
+                  <p>{ProjectData[3].description}</p>
+                  <h6 className={classes.CardTags}>{ProjectData[3].tags}</h6>
+              </div>
+            </div>
+          
+            <div className={classes.extraProject2}>
+              <div className={classes.EPTop}>
+                <img src={folderIcon} alt='folder icon'/>
+                <img src={GHIcon} alt='github icon'/>
+              </div>
+              <div className={classes.EPBot}>
+                <h2>{ProjectData[4].title}</h2>
+                  <p>{ProjectData[4].description}</p>
+                  <h6 className={classes.CardTags}>{ProjectData[4].tags}</h6>
+              </div>
+            </div>
+          
+          </div>
         </div>
       </div>
       <div className={classes.contactDiv}>
@@ -177,13 +210,14 @@ const Home = () => {
         </div>
         <div className={classes.contactBot}>
           <form>
-            <input type='text' placeholder='Name *' name='Name' required />
-            <input type='text' placeholder='Company' name='Company' />
-            <input type='text' placeholder='Phone Number' name='number' />
-            <input type='text' placeholder='Email *' name='email' required />
+            <input type='text' placeholder='Name *' id='cName' name='Name' required />
+            <input type='text' placeholder='Company'  id='cComp' name='Company' />
+            <input type='text' placeholder='Phone Number' id='cNumber' name='number' />
+            <input type='text' placeholder='Email *' name='email' id='cEmail' required />
             <textarea name='textarea' placeholder='What can I do for you? *' rows='6' cols='30' />
+            <button className={classes.contactButton}>Send It</button>
           </form>
-          <button>Send It</button>
+          {/* <button>Send It</button> */}
         </div>
       </div>
     </div>

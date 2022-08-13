@@ -28,6 +28,7 @@ body{
 }
 .intro{
     text-align: left;
+    margin-bottom: 30%;
     max-width: 600px;
 }
 .intro h4{
@@ -64,7 +65,7 @@ body{
 .sectionHeadings{
     display: grid;
     grid-template-columns: 35% 65%;
-    margin-top: 30%;
+    margin-top: 0%;
 }
 .sectionHeadings h3{
     grid-column: 1/2;
@@ -88,6 +89,9 @@ body{
     margin: auto;
 }
 
+.aboutDiv{
+    margin-bottom: 40%;
+}
 .aboutImgWrapper img{
     width: 100%;
     margin: -10% 10% 10% -10%;
@@ -116,6 +120,9 @@ body{
     content: "▹";
     font-size: var(--fz-md);
     margin-right: 2%;
+}
+.projects{
+    margin-bottom: 30%;
 }
 .CardDiv1,
 .CardDiv2,
@@ -191,7 +198,7 @@ form textarea{
     width: 80%;
     max-width: 230px;
 }
-.contactBot button{
+.contactButton{
     background-color: var(--primary);
     border: 1px solid var(--terciary);
     color: var(--terciary);
@@ -199,6 +206,8 @@ form textarea{
     border-radius: 5px;
     margin-top: 5%;
     font-size: var(--fz-md);
+    width: 80%;
+    max-width: 230px;
 }
 
 .socialLinks{
@@ -212,6 +221,77 @@ form textarea{
 .cardImgWrapper{
     display: none;
 }
+
+.extraProject1{
+    background-color: var(--secondaryBackground);
+    border-radius: 10px;
+    padding: 5% 5%;
+    height: 400px;
+    width: 90%;
+    margin: 10% auto;
+    max-width: 300px;
+    display: grid;
+    grid-template-rows: 25% 75%;
+}
+.extraProject2{
+    background-color: var(--secondaryBackground);
+    border-radius: 10px;
+    padding: 5% 5%;
+    height: 400px;
+    width: 90%;
+    margin: 10% auto;
+    max-width: 300px;
+    display: grid;
+    grid-template-rows: 25% 75%;
+}
+.EPTop{
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+.EPTop img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.EPBot{
+    grid-row: 2/3;
+
+}
+.EPBot h2{
+    color: var(--lightSlate);  
+}
+.EPBot p{
+    font-size: var(--fz-md);
+    color: var(--slate); 
+}
+.EPBot h6{
+    font-size: var(--fz-sm);
+    color: var(--slate)
+}
+
+@media(min-width:550px){
+    .contactDiv{
+        width: 90%;
+        margin: auto;
+    }
+    .contactTop{
+        width: 90%;
+        margin: auto;
+    }
+    .contactBot{
+        margin: 10% auto;
+        width: 60%;
+    }
+    form{
+        margin: auto auto auto 10%;
+        width: 100%;
+    }
+}
+
 
 @media(min-width:700px){
     .projects{
@@ -314,8 +394,65 @@ form textarea{
         z-index: -10;
         opacity: .6;
     } 
-    
 
+    .extraProjects{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: auto;
+    }
+    .extraProject1,
+    .extraProject2{
+        height: 400px;
+        display: grid;
+        grid-template-rows: 10% 90%;
+    }
+    .extraProject2{
+        margin-left: 2%;
+    }
+    .contactDiv{
+        width: 90%;
+        max-width: 800px;
+    }
+    .contactBot{
+        width: 100%;
+        max-width: 800px;
+        margin: 10% 20% 10% auto;
+    }
+    form{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 50%;
+        width: 100%;
+        margin: auto;
+    }
+    form input{
+        width: 90%;
+        max-width: 500px;
+        height: 35px;
+    }
+    #cName{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #cComp{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #cNumber{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #cEmail{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    form textarea{
+        grid-column: 1/2;
+        grid-row: 3/4;
+        width: 90%;
+        max-width: 500px;
+    }
 }
 
 @media(min-width:800px){
