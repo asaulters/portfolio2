@@ -26,6 +26,9 @@ body{
     width: 85%;
     margin: auto;
 }
+button{
+    cursor: pointer;
+}
 .intro{
     text-align: left;
     margin-bottom: 30%;
@@ -64,7 +67,7 @@ body{
 }
 .sectionHeadings{
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 40% 60%;
     margin-top: 0%;
 }
 .sectionHeadings h3{
@@ -76,6 +79,10 @@ body{
     color: var(--lightSlate);
     font-size: var(--fz-xl);
     padding-left: 5%;
+}
+.SH2{
+    /* margin-left: 20%; */
+    /* width: 40%; */
 }
 
 
@@ -91,6 +98,7 @@ body{
 
 .aboutDiv{
     margin-bottom: 40%;
+
 }
 .aboutImgWrapper img{
     width: 100%;
@@ -122,7 +130,7 @@ body{
     margin-right: 2%;
 }
 .projects{
-    margin-bottom: 30%;
+    margin: 10% auto 30%;
 }
 .CardDiv1,
 .CardDiv2,
@@ -273,6 +281,8 @@ form textarea{
     color: var(--slate)
 }
 
+
+
 @media(min-width:550px){
     .contactDiv{
         /* width: 90%; */
@@ -291,6 +301,7 @@ form textarea{
         margin: auto auto auto 10%;
         width: 100%;
     }
+
 }
 
 
@@ -459,7 +470,7 @@ form textarea{
 @media(min-width:800px){
     .intro{
         max-width: 900px;
-        margin: auto;
+        margin: 10% auto 30% auto;
     }
     .intro p{
         width: 600px;
@@ -487,3 +498,34 @@ form textarea{
     }
 }
 
+
+@media(min-width:1000px)
+{
+    .intro{
+        width: 90%;
+        margin-left: 15%;
+        margin-right: 0%; 
+    }
+    .intro h1{
+
+        font-size: 80px;
+    }
+    .intro h2{
+
+        font-size: 70px;
+    }
+    .aboutDiv{
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .sectionHeadings{
+        width: 90%;
+        max-width: 1000px;
+    }
+    .SH2{
+        width: 100%;
+        max-width: 300px;
+        margin: auto ;
+    }
+}

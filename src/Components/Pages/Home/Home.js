@@ -100,21 +100,10 @@ const Home = () => {
         
       </div>
       <div className={classes.projectsDiv}>
-        <div className={classes.sectionHeadings}>
-            <h3>02.<span>Some Things I've Built</span></h3><div></div>
+        <div className={classes.sectionHeadings} >
+            <h3 className={classes.SH2}>02.<span>Some Things I've Built</span></h3><div></div>
         </div>
         <div className={classes.projects}>
-        {/* {ProjectData.filter((project) => project.featured === true).map((project, i)=>(
-          <FeaturedCard 
-            index={i}
-            title={project.title}
-            description={project.description}
-            tags={project.tags}
-            site={project.site}
-            img={project.img}
-            id={project.id}
-            />)
-        )} */}
           <div className={classes.cardWrapper1}>
             <div className={classes.CardDiv1} >
               

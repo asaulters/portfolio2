@@ -58,9 +58,10 @@ const Layout = ({children}) => {
             </div>
             <div className={classes.bottomFooter}>
                 <div className={classes.socialLinks}>
-                    <img src={GhLogo} alt='Github Logo' />
-                    <img src={IgLogo} alt='IG Logo' />
-                    <img src={LiLogo} alt='LI Logo' />
+                    <img src={GhLogo} alt='Github Logo' className={classes.social1}/>
+                    <img src={IgLogo} alt='IG Logo'  className={classes.social2}/>
+                    <img src={LiLogo} alt='LI Logo'  className={classes.social3}/>
+                    <div></div>
                 </div>
                 <div className={classes.bottomCopy}>
                     <h6>Built by Adam Saulters</h6>
