@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import emailjs, { send } from '@emailjs/browser';
 
 import AvatarImg from '../../../Assets/Home/avatar1.jpg'
 
@@ -8,9 +9,26 @@ import BCDImg from '../../../Assets/Home/projects/bcd1.png';
 import MediaImg from '../../../Assets/Home/projects/entertaimentApp1.png';
 import GHIcon from '../../../Assets/Home/github.png';
 import folderIcon from '../../../Assets/Home/folder.png';
+import LogoIcon from '../../../Assets/Home/p1-01.png';
+
+
 
 
 const Home = () => {
+
+  const form = useRef();
+    
+  const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('gmail_service', 'template1', form.current, 'DDUtYDQVQORMcdz0B')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+  };
 
   const ProjectData = [
     {
@@ -62,20 +80,20 @@ const Home = () => {
 
 
   const projectNav = () => {
-    window.open('{project.site}', 'blank', 'noopener noreferrer')
+    window.open('{project.site}', "_blank")
   }
 
 
   return (
     <div className={classes.wrapper}>
-      <div className={classes.intro}>
+      <div className={classes.intro} id="home">
         <h4>Hey there, my name is</h4>
         <h1>Adam Saulters.</h1>
         <h2>I help people be seen on the web.</h2>
         <p>I'm a jr. front end engineer specializing in web development and front end web apps. Currently, I'm focused on building my skills and experence in React based front end projects.</p>
-        <button>Check out my projects!</button>
+        <button href="#projects">Check out my projects!</button>
       </div>
-      <div className={classes.aboutDiv}>
+      <div className={classes.aboutDiv} id="about">
         <div className={classes.sectionHeadings}>
           <h3>01.<span>About Me</span></h3><div></div>
         </div>
@@ -99,7 +117,7 @@ const Home = () => {
         </div>
         
       </div>
-      <div className={classes.projectsDiv}>
+      <div className={classes.projectsDiv} id="projects">
         <div className={classes.sectionHeadings} >
             <h3 className={classes.SH2}>02.<span>Some Things I've Built</span></h3><div></div>
         </div>
@@ -113,8 +131,12 @@ const Home = () => {
                   <p>{ProjectData[0].description}</p>
                   <h6 className={classes.CardTags}>{ProjectData[0].tags}</h6>
                 </div>
-
-                <button onClick={projectNav}>Learn More</button>
+                <button><a 
+                href='http://bullcitydevelopment.com'
+                target='_blank'
+                rel='noopener noreferrer'
+                >Learn More</a></button>
+                {/* <button onClick={()=> window.open('bullcitydevelopment.com')}>Learn More</button> */}
             </div>
             <div className={classes.cardImgWrapper1}>
               <img src={BCDImg} alt='img1' className={classes.CardImg} />
@@ -188,7 +210,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className={classes.contactDiv}>
+      <div className={classes.contactDiv} id="contact">
         <div className={classes.sectionHeadings}>
             <h3>03.<span>What's Next</span></h3><div></div>
         </div>
@@ -198,13 +220,15 @@ const Home = () => {
           <p>I'm always on the lookout and open to new and exciting ideas, projects, and opportunities. If you think you have one of these or just want to chat, feel free to drop me a line below. </p>
         </div>
         <div className={classes.contactBot}>
-          <form>
+          <form type='submit' ref={form} onSubmit={sendEmail}>
             <input type='text' placeholder='Name *' id='cName' name='Name' required />
             <input type='text' placeholder='Company'  id='cComp' name='Company' />
             <input type='text' placeholder='Phone Number' id='cNumber' name='number' />
             <input type='text' placeholder='Email *' name='email' id='cEmail' required />
             <textarea name='textarea' placeholder='What can I do for you? *' rows='6' cols='30' />
-            <button className={classes.contactButton}>Send It</button>
+            <button 
+              className={classes.contactButton}
+              >Send It</button>
           </form>
           {/* <button>Send It</button> */}
         </div>

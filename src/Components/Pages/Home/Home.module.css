@@ -496,6 +496,17 @@ form textarea{
         /* grid-row: 1/3; */
         margin-top: 5%;
     }
+    .contactDiv{
+        width: 100%;
+    }
+    .contactTop{
+        width: 90%;
+        margin: 5% auto;
+    }
+    .contactBot{
+        width: 90%;
+        margin: 10% auto;
+    }
 }
 
 
@@ -503,11 +514,11 @@ form textarea{
 {
     .intro{
         width: 90%;
-        margin-left: 15%;
+        margin-left: 5%;
         margin-right: 0%; 
     }
     .intro h1{
-
+        
         font-size: 80px;
     }
     .intro h2{
@@ -519,13 +530,24 @@ form textarea{
         margin-left: auto;
         margin-right: auto;
     }
+    .projectsDiv{
+        max-width: 900px;
+        margin: auto;
+    }
     .sectionHeadings{
-        width: 90%;
-        max-width: 1000px;
+        width: 100%;
+        max-width: 900px;
     }
     .SH2{
         width: 100%;
-        max-width: 300px;
+        max-width: 400px;
         margin: auto ;
+    }
+    .contactDiv{
+        width: 100%;
+        max-width: 900px;
+    }
+    .contactBot{
+        margin: auto;
     }
 }

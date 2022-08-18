@@ -5,6 +5,7 @@ import classes from './Layout.module.css';
 import IgLogo from '../../../Assets/Home/instagram.png';
 import LiLogo from '../../../Assets/Home/linkedin.png';
 import GhLogo from '../../../Assets/Home/github.png'
+import LogoIcon from '../../../Assets/Home/p1-01.png';
 
 const Layout = ({children}) => {
     const [extend, setExtend] = useState(false);
@@ -14,21 +15,24 @@ const Layout = ({children}) => {
     }
 
 
+
+
   return (
     <>
         <div className={classes.wrapper}>
             <header>
                <nav>
                 <div className={classes.logoDiv}>
-                    <h2>logo</h2>
+                    <img src={LogoIcon} alt='logo' />
                 </div>
                 <div className={classes.links_full}>
                     <div className={classes.nav_Links}>
-                        <NavLink to='/' className={classes.link_a}>Home</NavLink> 
-                        <NavLink to='/' className={classes.link_a}>About</NavLink> 
-                        <NavLink to='/' className={classes.link_a}>Experience</NavLink> 
-                        <NavLink to='/' className={classes.link_a}>Work</NavLink> 
-                        <NavLink to='/' className={classes.link_a}>Contact</NavLink> 
+                        <a href='#home' className={classes.link_a}>Home</a> 
+                        <a href='#about' className={classes.link_a}>About</a> 
+                        {/* <a href='/' className={classes.link_a}>Experience</a>  */}
+                        <a href='#projects' className={classes.link_a}>Work</a> 
+                        <a href='#contact' className={classes.link_a}>Contact</a> 
+                        <a href='/' className={classes.link_a}><span className={classes.resumeLink}>Resume</span></a> 
                     </div>
                     <button className={classes.burger} onClick={LinkExtend}>
                     {!extend ? <>&#8801;</> : <>&#10005;</> }
@@ -39,11 +43,12 @@ const Layout = ({children}) => {
                 <div className={classes.extendedLinks}>
                     {extend &&(
                         <div className={classes.extended_nav_links}>
-                            <NavLink to='/' className={classes.link_a}>Home</NavLink> 
-                            <NavLink to='/' className={classes.link_a}>About</NavLink> 
-                            <NavLink to='/' className={classes.link_a}>Experience</NavLink> 
-                            <NavLink to='/' className={classes.link_a}>Work</NavLink> 
-                            <NavLink to='/' className={classes.link_a}>Contact</NavLink> 
+                            <a href='#home' className={classes.link_a}>Home</a> 
+                            <a href='#about' className={classes.link_a}>About</a> 
+                            {/* <a href='/' className={classes.link_a}>Experience</a>  */}
+                            <a href='#projects' className={classes.link_a}>Work</a> 
+                            <a href='#contact' className={classes.link_a} id='link1'>Contact</a> 
+                            <a href='/' className={classes.resume2Div}><span className={classes.resumeLink2}>Resume</span></a> 
                         </div>
                     )}
 
@@ -58,9 +63,30 @@ const Layout = ({children}) => {
             </div>
             <div className={classes.bottomFooter}>
                 <div className={classes.socialLinks}>
-                    <img src={GhLogo} alt='Github Logo' className={classes.social1}/>
-                    <img src={IgLogo} alt='IG Logo'  className={classes.social2}/>
-                    <img src={LiLogo} alt='LI Logo'  className={classes.social3}/>
+                    <img 
+                        src={GhLogo} 
+                        alt='Github Logo' 
+                        className={classes.social1}
+                        onClick={()=> {
+                            window.open('https://github.com/asaulters', "_blank")
+                        }}
+                        />
+                    <img 
+                        src={IgLogo} 
+                        alt='IG Logo'  
+                        className={classes.social}
+                        onClick={()=> {
+                            window.open('https://www.instagram.com/adam05s/', "_blank")
+                        }}
+                        />
+                    <img 
+                        src={LiLogo} 
+                        alt='LI Logo'  
+                        className={classes.social3}
+                        onClick={()=> {
+                            window.open('https://www.linkedin.com/in/adamsaulters/', "_blank")
+                        }}
+                        />
                     <div></div>
                 </div>
                 <div className={classes.bottomCopy}>
@@ -77,26 +103,3 @@ export default Layout;
 
 
 
-
-{/* <h2>Logo</h2>
-<nav>
-    <div className={classes.links_full}>
-        <NavLink to='/'>Home</NavLink> 
-        <NavLink to='/'>About</NavLink> 
-        <NavLink to='/'>Experience</NavLink> 
-        <NavLink to='/'>Work</NavLink> 
-        <NavLink to='/'>Contact</NavLink> 
-    </div>
-    <div className={classes.burger}>
-        <h1>&#8801;</h1>
-    </div>
-    <div className={classes.links_extended}>
-        <NavLink to='/'>Home</NavLink> 
-        <NavLink to='/'>About</NavLink> 
-        <NavLink to='/'>Experience</NavLink> 
-        <NavLink to='/'>Work</NavLink> 
-        <NavLink to='/'>Contact</NavLink> 
-    </div>
-</nav>
-
-</header> */}
