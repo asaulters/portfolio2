@@ -11,7 +11,7 @@ import GHIcon from '../../../Assets/Home/github.png';
 import folderIcon from '../../../Assets/Home/folder.png';
 import LogoIcon from '../../../Assets/Home/p1-01.png';
 
-
+// import EntApp from '../Projects/entertainment-app/src/index';
 
 
 const Home = () => {
@@ -38,6 +38,7 @@ const Home = () => {
       'tags': 'React Html Css JavaScript',
       'featured': true,
       'site': 'bullcitydevelopment.com',
+      'github': 'https://github.com/asaulters/BCD',
       'img': '../../../Assets/Home/bcd1.png'
     },
     {
@@ -47,6 +48,7 @@ const Home = () => {
       'tags': 'React JavaScript Html Css',
       'featured': true,
       'site': 'bullcitydevelopment.com',
+      'github': 'https://github.com/asaulters/entertainment-app',
       'img': '{MediaImg}'
     },
     {
@@ -65,6 +67,7 @@ const Home = () => {
       'tags': ' JavaScript Html Css',
       'featured': false,
       'site': '#',
+      'github':'https://github.com/asaulters/FEM---Designo',
       
     },
         {
@@ -74,14 +77,32 @@ const Home = () => {
       'tags': ' JavaScript Html Css',
       'featured': false,
       'site': '#',
+      'github':'https://github.com/asaulters/Arch-Studio'
+    },
+    {
+      'id': '6',
+      'title': 'PhotoSnap FEM Site',
+      'description': 'This is my first bigger FEM challenge. It is a multi page site that I did before I learned React and much of JS actually. In this I explored more static JS, Html, and Css. It gave me a lot of practice with grid and flex, while helping cement some of my CSS problems I was having at the time.',
+      'tags': ' JavaScript Html Css',
+      'featured': false,
+      'site': '#',
+      'github':'https://github.com/asaulters/FEM---Photosnap-App'
     },
   ];
 
 
 
   const projectNav = () => {
-    window.open('{project.site}', "_blank")
+    window.open('{EntApp}', "_blank")
+  };
+
+  // const projectNavGH = ()=>{
+  //   window.open('{project.github}', '_blank')
+  // }
+  const projectNavGH = ()=>{
+    window.location.href='{project.github}';
   }
+
 
 
   return (
@@ -185,8 +206,16 @@ const Home = () => {
           <div className={classes.extraProjects}>
             <div className={classes.extraProject1}>
               <div className={classes.EPTop}>
-                <img src={folderIcon} alt='folder icon'/>
-                <img src={GHIcon} alt='github icon'/>
+                <img 
+                  src={folderIcon} 
+                  alt='folder icon'/>
+                <img 
+                  src={GHIcon} 
+                  alt='github icon'
+                  onClick={() =>{
+                    window.open('https://github.com/asaulters/FEM---Designo', '_blank')
+                  }}  
+                  />
               </div>
               <div className={classes.EPBot}>
                 <h2>{ProjectData[3].title}</h2>
@@ -197,8 +226,15 @@ const Home = () => {
           
             <div className={classes.extraProject2}>
               <div className={classes.EPTop}>
-                <img src={folderIcon} alt='folder icon'/>
-                <img src={GHIcon} alt='github icon'/>
+              <img 
+                  src={folderIcon} 
+                  alt='folder icon'/>
+                <img 
+                  src={GHIcon} 
+                  alt='github icon'
+                  onClick={() =>{
+                    window.open('https://github.com/asaulters/Arch-Studio', '_blank')
+                  }}  />
               </div>
               <div className={classes.EPBot}>
                 <h2>{ProjectData[4].title}</h2>
