@@ -242,6 +242,24 @@ const Home = () => {
                   <h6 className={classes.CardTags}>{ProjectData[4].tags}</h6>
               </div>
             </div>
+            <div className={classes.extraProject3}>
+              <div className={classes.EPTop}>
+              <img 
+                  src={folderIcon} 
+                  alt='folder icon'/>
+                <img 
+                  src={GHIcon} 
+                  alt='github icon'
+                  onClick={() =>{
+                    window.open('https://github.com/asaulters/Arch-Studio', '_blank')
+                  }}  />
+              </div>
+              <div className={classes.EPBot}>
+                <h2>{ProjectData[5].title}</h2>
+                  <p>{ProjectData[5].description}</p>
+                  <h6 className={classes.CardTags}>{ProjectData[5].tags}</h6>
+              </div>
+            </div>
           
           </div>
         </div>

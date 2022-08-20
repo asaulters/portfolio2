@@ -252,6 +252,17 @@ form textarea{
     display: grid;
     grid-template-rows: 25% 75%;
 }
+.extraProject3{
+    background-color: var(--secondaryBackground);
+    border-radius: 10px;
+    padding: 5% 5%;
+    height: 400px;
+    width: 90%;
+    margin: 10% auto;
+    max-width: 300px;
+    display: grid;
+    grid-template-rows: 25% 75%;
+}
 .EPTop{
     grid-row: 1/2;
     display: flex;
@@ -408,20 +419,39 @@ form textarea{
     } 
 
     .extraProjects{
-        display: flex;
+        /* display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: space-around; */
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
         margin: auto;
+        /* gap: 10px; */
     }
     .extraProject1,
-    .extraProject2{
+    .extraProject2,
+    .extraProject3{
         height: 400px;
         display: grid;
         grid-template-rows: 10% 90%;
+        /* width: 30%; */
+    }
+    .extraProject1{
+        grid-row: 1/2;
+        grid-column: 1/2;
     }
     .extraProject2{
+        grid-row: 1/2;
+        grid-column: 2/3;
         margin-left: 2%;
     }
+    .extraProject3{
+        grid-row: 2/3;
+        grid-column: 1/2;
+        margin-left: 50%;
+    }
+
     .contactDiv{
         width: 90%;
         max-width: 800px;
@@ -534,6 +564,21 @@ form textarea{
         max-width: 900px;
         margin: auto;
     }
+    .extraProjects{
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        justify-content: space-around;
+        height: fit-content;
+
+    }.extraProject1{
+        height: 500px;
+    }
+    .extraProject2,
+    .extraProject3{
+        margin-left: 2%;
+        height: 500px;
+    }
     .sectionHeadings{
         width: 100%;
         max-width: 900px;
@@ -549,5 +594,13 @@ form textarea{
     }
     .contactBot{
         margin: auto;
+    }
+}
+
+@media(min-width:1100px){
+    .extraProject1,
+    .extraProject2,
+    .extraProject3{
+        height: 400px;
     }
 }

@@ -32,7 +32,7 @@ const Layout = ({children}) => {
                         {/* <a href='/' className={classes.link_a}>Experience</a>  */}
                         <a href='#projects' className={classes.link_a}>Work</a> 
                         <a href='#contact' className={classes.link_a}>Contact</a> 
-                        <a href='/' className={classes.link_a}><span className={classes.resumeLink}>Resume</span></a> 
+                        <Link to='resume' className={classes.link_a}><span className={classes.resumeLink}>Resume</span></Link> 
                     </div>
                     <button className={classes.burger} onClick={LinkExtend}>
                     {!extend ? <>&#8801;</> : <>&#10005;</> }
