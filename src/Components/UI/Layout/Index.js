@@ -27,12 +27,20 @@ const Layout = ({children}) => {
                 </div>
                 <div className={classes.links_full}>
                     <div className={classes.nav_Links}>
-                        <a href='#home' className={classes.link_a}>Home</a> 
-                        <a href='#about' className={classes.link_a}>About</a> 
+                        <Link to ='/' className={classes.link_a}>Home</Link> 
+                        <NavLink 
+                            to='/'
+                            location={{
+                                hash: '#contact'
+                            }}
+                            href='#contact' 
+                            className={classes.link_a}>
+                            About
+                        </NavLink> 
                         {/* <a href='/' className={classes.link_a}>Experience</a>  */}
                         <a href='#projects' className={classes.link_a}>Work</a> 
-                        <a href='#contact' className={classes.link_a}>Contact</a> 
-                        <Link to='resume' className={classes.link_a}><span className={classes.resumeLink}>Resume</span></Link> 
+                        <a href='http://localhost:3000/#contact' className={classes.link_a}>Contact</a> 
+                        <NavLink to='/resume' className={classes.link_a}><span className={classes.resumeLink}>Resume</span></NavLink> 
                     </div>
                     <button className={classes.burger} onClick={LinkExtend}>
                     {!extend ? <>&#8801;</> : <>&#10005;</> }
