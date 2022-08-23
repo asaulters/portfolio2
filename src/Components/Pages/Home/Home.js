@@ -112,7 +112,7 @@ const Home = () => {
         <h1>Adam Saulters.</h1>
         <h2>I help people be seen on the web.</h2>
         <p>I'm a jr. front end engineer specializing in web development and front end web apps. Currently, I'm focused on building my skills and experence in React based front end projects.</p>
-        <button href="#projects">Check out my projects!</button>
+        <button><a href="#projects">Check out my projects!</a></button>
       </div>
       <div className={classes.aboutDiv} id="about">
         <div className={classes.sectionHeadings}>
@@ -123,7 +123,7 @@ const Home = () => {
           <br/><br />
           Now if you move forward to today, I have been able to work with many small businesses on a variety of different projects. My main focus today is further developing my skills and helping businesses be seen in a way that allows their customers to really know what they're about.
           <br/><br/>
-          Here are a few technolofies I've been working with recently: </p>
+          Here are a few technologies I've been working with recently: </p>
             <ul>
               <li>JavaScript</li>
               <li>Html</li>

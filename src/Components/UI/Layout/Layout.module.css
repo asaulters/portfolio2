@@ -112,18 +112,22 @@ nav{
     font-weight: 500;
     border: 1px solid var(--terciary);
   }
-  .resume2Div{
+  .resume_Link{
     margin-top: 5%;
+  }
+  .resume2Div{
+    margin-top: 10%;
   }
   .resumeLink2{
     background-color: var(--primary);
     color: var(--terciary);
-    padding: 2% 15%;
+    padding: 2% 10%;
+    max-width: 100px;
     /* margin-right: 10%; */
     border-radius: 5px;
     font-weight: 500;
     border: 1px solid var(--terciary);
-    margin-top: 30%;
+    margin-top: 45%;
   }
 .extended_nav_links{
     display: flex;

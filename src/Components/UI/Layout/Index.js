@@ -6,6 +6,7 @@ import IgLogo from '../../../Assets/Home/instagram.png';
 import LiLogo from '../../../Assets/Home/linkedin.png';
 import GhLogo from '../../../Assets/Home/github.png'
 import LogoIcon from '../../../Assets/Home/p1-01.png';
+import resumePDF from '../../../Assets/Home/Adamsaulters Resume (1) (3).pdf'
 
 const Layout = ({children}) => {
     const [extend, setExtend] = useState(false);
@@ -27,20 +28,13 @@ const Layout = ({children}) => {
                 </div>
                 <div className={classes.links_full}>
                     <div className={classes.nav_Links}>
-                        <Link to ='/' className={classes.link_a}>Home</Link> 
-                        <NavLink 
-                            to='/'
-                            location={{
-                                hash: '#contact'
-                            }}
-                            href='#contact' 
-                            className={classes.link_a}>
-                            About
-                        </NavLink> 
+                        <a href='/' className={classes.link_a}>Home</a> 
+                        <a href='#about' className={classes.link_a}>About</a> 
                         {/* <a href='/' className={classes.link_a}>Experience</a>  */}
                         <a href='#projects' className={classes.link_a}>Work</a> 
-                        <a href='http://localhost:3000/#contact' className={classes.link_a}>Contact</a> 
-                        <NavLink to='/resume' className={classes.link_a}><span className={classes.resumeLink}>Resume</span></NavLink> 
+                        <a href='#contact' className={classes.link_a}>Contact</a> 
+                        {/* <NavLink to='/resume' className={classes.link_a}><span className={classes.resumeLink}>Resume</span></NavLink>  */}
+                        <a href={resumePDF} without rel='noopener noreferrer' target='blank' ><span className={classes.resumeLink}>Resume</span></a>
                     </div>
                     <button className={classes.burger} onClick={LinkExtend}>
                     {!extend ? <>&#8801;</> : <>&#10005;</> }
@@ -56,7 +50,7 @@ const Layout = ({children}) => {
                             {/* <a href='/' className={classes.link_a}>Experience</a>  */}
                             <a href='#projects' className={classes.link_a}>Work</a> 
                             <a href='#contact' className={classes.link_a} id='link1'>Contact</a> 
-                            <a href='/' className={classes.resume2Div}><span className={classes.resumeLink2}>Resume</span></a> 
+                            <a href={resumePDF} without rel='noopener noreferrer' target='blank' className={classes.resume_Link}><span className={classes.resumeLink2}>Resume</span></a> 
                         </div>
                     )}
 
