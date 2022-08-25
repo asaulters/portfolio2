@@ -174,7 +174,11 @@ const Home = () => {
                   <p>{ProjectData[1].description}</p>
                   <h6 className={classes.CardTags}>{ProjectData[1].tags}</h6>
                 </div>
-                <button onClick={projectNav}>Learn More</button>
+                <button><a 
+                href='https://entertainment-app-rose.vercel.app/'
+                target='_blank'
+                rel='noopener noreferrer'
+                >Learn More</a></button>
             </div>
             <div className={classes.cardImgWrapper2}>
               <img src={MediaImg} alt='img1' className={classes.CardImg} />

@@ -151,7 +151,7 @@ nav{
     margin: auto 15% auto auto;
 }
 .bottomCopy{
-    margin: auto 60% auto auto;
+    margin: auto ;
     width: 100%;
     text-align: center;
     font-size: var(--fz-md);
