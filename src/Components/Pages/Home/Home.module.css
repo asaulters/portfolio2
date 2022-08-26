@@ -73,6 +73,7 @@ button{
     display: grid;
     grid-template-columns: 40% 60%;
     margin-top: 0%;
+    height: 50px;
 }
 .sectionHeadings h3{
     grid-column: 1/2;

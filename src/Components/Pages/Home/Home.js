@@ -7,6 +7,7 @@ import classes from './Home.module.css';
 import FeaturedCard from '../../UI/Shared/FeaturedCard';
 import BCDImg from '../../../Assets/Home/projects/bcd1.png';
 import MediaImg from '../../../Assets/Home/projects/entertaimentApp1.png';
+import Construction from '../../../Assets/Home/website-under-construction-2914-3028505477'
 import GHIcon from '../../../Assets/Home/github.png';
 import folderIcon from '../../../Assets/Home/folder.png';
 import LogoIcon from '../../../Assets/Home/p1-01.png';
@@ -47,21 +48,31 @@ const Home = () => {
       'description': 'This is a media site I designed and developed. This site is only front end, but it does have the different functional components you would expect. This includes a search function and a bookmark component.',
       'tags': 'React JavaScript Html Css',
       'featured': true,
-      'site': 'bullcitydevelopment.com',
+      'site': 'https://entertainment-app-rose.vercel.app/',
       'github': 'https://github.com/asaulters/entertainment-app',
       'img': '{MediaImg}'
     },
     {
       'id': '3',
-      'title': 'Mack Construction',
+      'title': 'Mack Construction (Site is being updated now)',
       'description': 'This site is a freelance site I created for a small construction businesss. Their goal was to be able to have a nice looking site to send their new clients to allow them to look more professional now that they are bidding on bigger projects',
       'tags': 'React JavaScript Html Css',
       'featured': true,
       'site': 'bullcitydevelopment.com',
-      'img': '../../../Assets/Home/bcd1.png'
+      'img': '../../../Assets/Home/website-under-construction-2914-3028505477'
+    },
+
+        {
+      'id': '4',
+      'title': 'Arch Studio FEM Site',
+      'description': 'This site is a challenge I got off of Front End Mentor as well. In this I explored more static JS, Html, and Css without React. It gave me a lot of practice on different nav methods as well as what helped really cement grid d/t the design.',
+      'tags': ' JavaScript Html Css',
+      'featured': false,
+      'site': 'https://arch-studio3.vercel.app/index.html',
+      'github':'https://github.com/asaulters/Arch-Studio'
     },
     {
-      'id': '4',
+      'id': '5',
       'title': 'Designo FEM Site',
       'description': 'This site is a challenge I got off of Front End Mentor. In it, they give you a target for what the site is supposed to do, look like, and have on it and you create it with whatever you wish. <br><br> In this I explored more static JS, Html, and Css without React. It gave me a lot of practice on my design development.',
       'tags': ' JavaScript Html Css',
@@ -70,22 +81,13 @@ const Home = () => {
       'github':'https://github.com/asaulters/FEM---Designo',
       
     },
-        {
-      'id': '5',
-      'title': 'Arch Studio FEM Site',
-      'description': 'This site is a challenge I got off of Front End Mentor as well. In this I explored more static JS, Html, and Css without React. It gave me a lot of practice on different nav methods as well as what helped really cement grid d/t the design.',
-      'tags': ' JavaScript Html Css',
-      'featured': false,
-      'site': '#',
-      'github':'https://github.com/asaulters/Arch-Studio'
-    },
     {
       'id': '6',
       'title': 'PhotoSnap FEM Site',
       'description': 'This is my first bigger FEM challenge. It is a multi page site that I did before I learned React and much of JS actually. In this I explored more static JS, Html, and Css. It gave me a lot of practice with grid and flex, while helping cement some of my CSS problems I was having at the time.',
       'tags': ' JavaScript Html Css',
       'featured': false,
-      'site': '#',
+      'site': 'https://fem-photosnap-app.vercel.app/index.html',
       'github':'https://github.com/asaulters/FEM---Photosnap-App'
     },
   ];
@@ -152,12 +154,10 @@ const Home = () => {
                   <p>{ProjectData[0].description}</p>
                   <h6 className={classes.CardTags}>{ProjectData[0].tags}</h6>
                 </div>
-                <button><a 
-                href='http://bullcitydevelopment.com'
-                target='_blank'
-                rel='noopener noreferrer'
-                >Learn More</a></button>
-                {/* <button onClick={()=> window.open('bullcitydevelopment.com')}>Learn More</button> */}
+                <button onClick={()=>{
+                  window.open('http://bullcitydevelopment.com', "_blank")
+                }}><a>Learn More</a></button>
+                
             </div>
             <div className={classes.cardImgWrapper1}>
               <img src={BCDImg} alt='img1' className={classes.CardImg} />
@@ -174,11 +174,9 @@ const Home = () => {
                   <p>{ProjectData[1].description}</p>
                   <h6 className={classes.CardTags}>{ProjectData[1].tags}</h6>
                 </div>
-                <button><a 
-                href='https://entertainment-app-rose.vercel.app/'
-                target='_blank'
-                rel='noopener noreferrer'
-                >Learn More</a></button>
+                <button onClick={()=>{
+                  window.open('https://entertainment-app-rose.vercel.app/', '_blank')
+                }}><a>Learn More</a></button>
             </div>
             <div className={classes.cardImgWrapper2}>
               <img src={MediaImg} alt='img1' className={classes.CardImg} />
@@ -196,10 +194,10 @@ const Home = () => {
                   <p>{ProjectData[2].description}</p>
                   <h6 className={classes.CardTags}>{ProjectData[2].tags}</h6>
                 </div>
-                <button onClick={projectNav}>Learn More</button>
+                <button >Learn More</button>
             </div>
             <div className={classes.cardImgWrapper3}>
-              <img src={MediaImg} alt='img1' className={classes.CardImg} />
+              <img src={Construction} alt='img1' className={classes.CardImg} />
             </div>      
           </div>
 
@@ -212,12 +210,16 @@ const Home = () => {
               <div className={classes.EPTop}>
                 <img 
                   src={folderIcon} 
-                  alt='folder icon'/>
+                  alt='folder icon'
+                    onClick={() => {
+                      window.open('https://arch-studio3.vercel.app/index.html')
+                    }}
+                  />
                 <img 
                   src={GHIcon} 
                   alt='github icon'
                   onClick={() =>{
-                    window.open('https://github.com/asaulters/FEM---Designo', '_blank')
+                    window.open('https://github.com/asaulters/Arch-Studio', '_blank')
                   }}  
                   />
               </div>
@@ -232,12 +234,16 @@ const Home = () => {
               <div className={classes.EPTop}>
               <img 
                   src={folderIcon} 
-                  alt='folder icon'/>
+                  alt='folder icon'
+                  onClick={() =>{
+                    window.open('https://fem-designo.vercel.app/', '_blank')
+                  }}  
+                  />
                 <img 
                   src={GHIcon} 
                   alt='github icon'
                   onClick={() =>{
-                    window.open('https://github.com/asaulters/Arch-Studio', '_blank')
+                    window.open('https://github.com/asaulters/FEM---Designo', '_blank')
                   }}  />
               </div>
               <div className={classes.EPBot}>
@@ -250,12 +256,16 @@ const Home = () => {
               <div className={classes.EPTop}>
               <img 
                   src={folderIcon} 
-                  alt='folder icon'/>
+                  alt='folder icon'
+                    onClick={() =>{
+                      window.open('https://fem-photosnap-app.vercel.app/', "_blank")
+                    }}
+                  />
                 <img 
                   src={GHIcon} 
                   alt='github icon'
                   onClick={() =>{
-                    window.open('https://github.com/asaulters/Arch-Studio', '_blank')
+                    window.open('https://github.com/asaulters/FEM---Photosnap-App', '_blank')
                   }}  />
               </div>
               <div className={classes.EPBot}>
