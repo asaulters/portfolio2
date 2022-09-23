@@ -4,13 +4,11 @@ import emailjs, { send } from '@emailjs/browser';
 import AvatarImg from '../../../Assets/Home/avatar1.jpg'
 
 import classes from './Home.module.css';
-import FeaturedCard from '../../UI/Shared/FeaturedCard';
 import BCDImg from '../../../Assets/Home/projects/bcd1.png';
 import MediaImg from '../../../Assets/Home/projects/entertaimentApp1.png';
-import Construction from '../../../Assets/Home/website-under-construction-2914-3028505477'
+import MCC from '../../../Assets/Home/projects/MCC.PNG';
 import GHIcon from '../../../Assets/Home/github.png';
 import folderIcon from '../../../Assets/Home/folder.png';
-import LogoIcon from '../../../Assets/Home/p1-01.png';
 
 // import EntApp from '../Projects/entertainment-app/src/index';
 
@@ -54,18 +52,18 @@ const Home = () => {
     },
     {
       'id': '3',
-      'title': 'Mack Construction (Site is being updated now)',
-      'description': 'This site is a freelance site I created for a small construction businesss. Their goal was to be able to have a nice looking site to send their new clients to allow them to look more professional now that they are bidding on bigger projects',
+      'title': 'Mack Construction Company',
+      'description': 'This site is a freelance site I created for a small general contractor construction businesss. Their goal was to be able to have a nice looking site to send their new clients to allow them to look more professional now that they are bidding on bigger residential and commercail projects.',
       'tags': 'React JavaScript Html Css',
       'featured': true,
-      'site': 'bullcitydevelopment.com',
-      'img': '../../../Assets/Home/website-under-construction-2914-3028505477'
+      'site': 'mackconstructioncompany.com',
+      'img': '../../../Assets/Home/projects/MCC.PNG'
     },
 
         {
       'id': '4',
       'title': 'Arch Studio FEM Site',
-      'description': 'This site is a challenge I got off of Front End Mentor as well. In this I explored more static JS, Html, and Css without React. It gave me a lot of practice on different nav methods as well as what helped really cement grid d/t the design.',
+      'description': 'This site is a challenge I got off of Front End Mentor as well back in early 2021. In this I explored more static JS, Html, and Css without React. It gave me a lot of practice on different nav methods as well as what helped really cement grid d/t the design.',
       'tags': ' JavaScript Html Css',
       'featured': false,
       'site': 'https://arch-studio3.vercel.app/index.html',
@@ -74,7 +72,7 @@ const Home = () => {
     {
       'id': '5',
       'title': 'Designo FEM Site',
-      'description': 'This site is a challenge I got off of Front End Mentor. In it, they give you a target for what the site is supposed to do, look like, and have on it and you create it with whatever you wish. <br><br> In this I explored more static JS, Html, and Css without React. It gave me a lot of practice on my design development.',
+      'description': 'This site is a challenge I got off of Front End Mentor back in early 2021. In it, they give you a target for what the site is supposed to do, look like, and have on it and you create it with whatever you wish.  In this I explored more static JS, Html, and Css without React. It gave me a lot of practice on my design development.',
       'tags': ' JavaScript Html Css',
       'featured': false,
       'site': '#',
@@ -90,6 +88,7 @@ const Home = () => {
       'site': 'https://fem-photosnap-app.vercel.app/index.html',
       'github':'https://github.com/asaulters/FEM---Photosnap-App'
     },
+
   ];
 
 
@@ -194,10 +193,12 @@ const Home = () => {
                   <p>{ProjectData[2].description}</p>
                   <h6 className={classes.CardTags}>{ProjectData[2].tags}</h6>
                 </div>
-                <button >Learn More</button>
+                <button onClick={()=>{
+                  window.open('https://mackconstructioncompany.com/', '_blank')
+                }}><a>Learn More</a></button>
             </div>
             <div className={classes.cardImgWrapper3}>
-              <img src={Construction} alt='img1' className={classes.CardImg} />
+              <img src={MCC} alt='Mack Construction Screenshot' className={classes.CardImg} />
             </div>      
           </div>
 

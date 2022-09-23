@@ -6,7 +6,7 @@ import IgLogo from '../../../Assets/Home/instagram.png';
 import LiLogo from '../../../Assets/Home/linkedin.png';
 import GhLogo from '../../../Assets/Home/github.png'
 import LogoIcon from '../../../Assets/Home/p1-01.png';
-import resumePDF from '../../../Assets/Home/Adamsaulters Resume (1) (3).pdf'
+import resumePDF from '../../../Assets/Home/Adamsaulters Resume (1) (5).pdf'
 
 const Layout = ({children}) => {
     const [extend, setExtend] = useState(false);
@@ -30,10 +30,8 @@ const Layout = ({children}) => {
                     <div className={classes.nav_Links}>
                         <a href='/' className={classes.link_a}>Home</a> 
                         <a href='#about' className={classes.link_a}>About</a> 
-                        {/* <a href='/' className={classes.link_a}>Experience</a>  */}
                         <a href='#projects' className={classes.link_a}>Work</a> 
                         <a href='#contact' className={classes.link_a}>Contact</a> 
-                        {/* <NavLink to='/resume' className={classes.link_a}><span className={classes.resumeLink}>Resume</span></NavLink>  */}
                         <a href={resumePDF} without rel='noopener noreferrer' target='blank' ><span className={classes.resumeLink}>Resume</span></a>
                     </div>
                     <button className={classes.burger} onClick={LinkExtend}>
